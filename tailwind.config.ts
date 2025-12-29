@@ -57,6 +57,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Lakshmi Printers Brand Colors
+        maroon: {
+          DEFAULT: "hsl(var(--maroon))",
+          dark: "hsl(var(--maroon-dark))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+        ivory: "hsl(var(--ivory))",
+        carbon: "hsl(var(--carbon))",
+        grey: "hsl(var(--grey))",
+        "soft-grey": "hsl(var(--soft-grey))",
+        cyan: "hsl(var(--cyan))",
+      },
+      fontFamily: {
+        heading: ["Poppins", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +83,47 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-down": {
+          from: { opacity: "0", transform: "translateY(-20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "scale-in": {
+          from: { opacity: "0", transform: "scale(0.95)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+        "slide-up": "slide-up 0.6s ease-out forwards",
+        "slide-down": "slide-down 0.6s ease-out forwards",
+        "scale-in": "scale-in 0.4s ease-out forwards",
+        shimmer: "shimmer 2s linear infinite",
+      },
+      boxShadow: {
+        card: "0 4px 20px -4px rgba(122, 31, 47, 0.1)",
+        "card-hover": "0 8px 30px -8px rgba(122, 31, 47, 0.2)",
+        gold: "0 4px 20px -4px rgba(240, 196, 25, 0.3)",
       },
     },
   },
